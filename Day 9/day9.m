@@ -5,7 +5,6 @@ A = zeros(10000,10000);
 
 t = cputime;
 
-
 fid = fopen('d9in_dirs.txt','r')
 
 B = load('d9in_howfar.mat');
