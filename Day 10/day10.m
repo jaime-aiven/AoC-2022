@@ -45,15 +45,12 @@ canvas = zeros(1,length(B));
 
 ##spritepos = [X() X()+1 X()+2] #I'm gonna control the left of the sprite instead
 
-
 for line = 1:6
-
 
   for k=1:40
 
 ##  disp('drawing pixel'), disp((40*(line-1)+k))
   spritepos = [X(40*(line-1)+k) X(40*(line-1)+k)+1 X(40*(line-1)+k)+2]
-
 ##  disp('X='), disp(X(40*(line-1)+k))
 
     if  (k >= X(40*(line-1)+k)) && (k <= X(40*(line-1)+k)+2)
@@ -61,10 +58,10 @@ for line = 1:6
     else canvas(1,40*(line-1)+k) = '.';
     endif
 
-##    disp('printing'), disp(canvas(1,40*(line-1)+k))
+##    disp('printing ASCII char'), disp(canvas(1,40*(line-1)+k))
   endfor
 
 endfor
 
 #Regular reshape function doesn't do what the problem needs
-screen = [canvas(1:40); canvas(41:80); canvas(81:120); canvas(121:160); canvas(161:200); canvas(201:240)];
+screen = [canvas(1:40); canvas(41:80); canvas(81:120); canvas(121:160); canvas(161:200); canvas(201:240)]
